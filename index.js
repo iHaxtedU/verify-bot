@@ -23,10 +23,9 @@ bot.on("message", async message => {
   if(cmd === `${prefix}verify`){
  
 let gRole = message.guild.roles.find(`name`, "Members");
-let verify = message.content(">verify");
-if (!verify) message.delete("Don't")
     
  message.member.addRole(gRole.id);
+    message.delete
   }
 });
 
