@@ -22,8 +22,10 @@ bot.on("message", async message => {
 
   if(cmd === `${prefix}verify`){
 let gRole = message.guild.roles.find(`name`, "Members");
+    let rRole = message.guild.roles.find(`name`, "Unverified");
     
  message.member.addRole(gRole.id);
+    message.member.removeRole(rRole.id);
     message.delete()
   }
 });
