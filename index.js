@@ -24,7 +24,7 @@ bot.on("message", async message => {
  
 let gRole = message.guild.roles.find(`name`, "Members");
     
- message.author.roles.add(gRole.id);
+ message.member.addRole(gRole.id);
   }
 });
 
