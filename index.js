@@ -23,7 +23,8 @@ bot.on("message", async message => {
   if(cmd === `${prefix}verify`){
     let gRole = message.guild.roles.find(`Members`, role)
     
-      (message.author.addRole(gRole.id));
+   if(message.author.roles.has(gRole.id)) return message.reply("They already have that role.");
+  await(message.author.addRole(gRole.id));
   }
 });
 
