@@ -28,7 +28,7 @@ let gRole = message.guild.roles.find(`name`, "Members");
     message.member.removeRole(rRole.id);
     message.delete()
   }
-  message.delete()
+  //message.delete()
 });
 
 bot.login(process.env.botToken);
