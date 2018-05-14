@@ -26,7 +26,7 @@ let gRole = message.guild.roles.find(`name`, "Members");
     
  message.member.addRole(gRole.id);
     message.member.removeRole(rRole.id);
-    message.delete()
+    message.author.send("You Have Successfully Verified Please Follow The Rules");
   }
  message.delete()
 });
